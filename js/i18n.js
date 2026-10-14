@@ -65,7 +65,7 @@ const dict = {
     wrong: ["¡Frío, frío! ❄️", "¡Uy, ahí no vive la calabaza!", "¡Casi! Prueba otra vez 👀"],
     allFound: "¡Has encontrado todas las calabazas! 🍬",
     signupDoor: "Apunta tu puerta",
-    soon: "Inscripciones próximamente",
+    soon: "Si deseas participar, solicítalo por el grupo de WhatsApp de Halloween de la comunidad.",
     tags: { gluten: "sin gluten", nuts: "sin frutos secos", lactose: "sin lactosa", egg: "sin huevo" },
 
     partyTitle: "Minifiesta infantil",
@@ -159,7 +159,7 @@ const dict = {
     wrong: ["Cold, cold! ❄️", "Oops, no pumpkin lives there!", "Almost! Try again 👀"],
     allFound: "You found all the pumpkins! 🍬",
     signupDoor: "Sign up your door",
-    soon: "Sign-ups coming soon",
+    soon: "If you would like to take part, ask in the community Halloween WhatsApp group.",
     tags: { gluten: "gluten-free", nuts: "nut-free", lactose: "lactose-free", egg: "egg-free" },
 
     partyTitle: "Kids' party",

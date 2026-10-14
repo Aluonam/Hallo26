@@ -6,6 +6,7 @@ export const doors = [
   { id: "1-0B" },
   // Portal 2
   { id: "2-3F" },
+  { id: "2-4G" },
   { id: "2-4H" },
   { id: "2-5E" },
   { id: "2-5F" },
@@ -15,6 +16,7 @@ export const doors = [
   { id: "3-4D" },
   { id: "3-7H" },
   // Portal 4
+  { id: "4-0C" },
   { id: "4-0D" },
   { id: "4-0G" },
   { id: "4-1B" },
