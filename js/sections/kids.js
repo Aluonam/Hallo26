@@ -1,6 +1,7 @@
 import { config } from "../config.js";
 import { t } from "../i18n.js";
 import { loadCsv } from "../sheet.js";
+import { avatars, fallback } from "../data/avatars.js";
 import { button, esc } from "./ui.js";
 
 // Peques inscritos: llegan solos desde la hoja del Google Form (config.sheets.kids).
@@ -31,7 +32,15 @@ export async function load() {
   }
 }
 
-const AVATARS = ["🎃", "👻", "🦇", "🕷️", "🧙", "🧛", "🧟", "💀", "🐈‍⬛", "🦉"];
+// "La Bruja Lucía" → " la bruja lucia": sin tildes ni mayúsculas, con un espacio delante de cada palabra.
+const words = (text) => " " + text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+// Emoji que encaja con el alias (js/data/avatars.js); si no hay ninguno, uno de reserva.
+function avatar(alias, i) {
+  const text = words(alias);
+  const hit = avatars.find(([keys]) => keys.some((k) => text.includes(words(k))));
+  return hit ? hit[1] : fallback[i % fallback.length];
+}
 
 // "2 - 4 años" se muestra tal cual; "7 - 10" → "7 - 10 años"
 const age = (text) => (/[a-zá-ú]/i.test(text) ? esc(text) : t("age", { n: esc(text) }));
@@ -53,7 +62,7 @@ const allergyChips = (list) =>
 function card(k, i) {
   return `
     <li class="kid">
-      <span class="avatar" style="--d:-${i * 0.7}s">${AVATARS[i % AVATARS.length]}</span>
+      <span class="avatar" style="--d:-${i * 0.7}s">${avatar(k.alias, i)}</span>
       <b>${esc(k.alias)}</b>
       ${k.age ? `<small>${age(k.age)}</small>` : ""}
     </li>`;

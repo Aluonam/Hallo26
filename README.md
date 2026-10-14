@@ -9,6 +9,7 @@ HTML + CSS + JS nativo, sin dependencias ni compilación. Publicada con GitHub P
 |-------------------------------------------|--------------------------|
 | Añadir una puerta participante            | `js/data/doors.js`       |
 | Peques inscritos                          | automático (Google Form → hoja → web) |
+| Emoji según el alias de cada peque        | `js/data/avatars.js`     |
 | Cambiar horas, enlaces WhatsApp/formularios | `js/config.js`         |
 | Cambiar un texto (ES/EN)                  | `js/i18n.js`             |
 | Añadir, quitar o reordenar secciones      | `js/main.js`             |
