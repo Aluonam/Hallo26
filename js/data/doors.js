@@ -23,7 +23,6 @@ export const doors = [
   // Portal 4
   { id: "4-0C" },
   { id: "4-0D" },
-  { id: "4-0G" },
   { id: "4-1B" },
   { id: "4-4A" },
 ];
